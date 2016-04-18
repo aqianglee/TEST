@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Home page</h2>
+	<h2>Home Struts</h2>
+	<a href="otherPage">Other Page</a>
 </body>
 </html>

@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Home spring mvc</h2>
-	<a href="otherPage">Other page</a>
+	<h2>Other page</h2>
 </body>
 </html>

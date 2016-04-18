@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<default-action-ref name="home">
+		</default-action-ref>
+
+		<action name="home" class="homeAction">
+			<result>index.jsp</result>
+		</action>
+
+		<action name="otherPage" class="otherPageAction">
+			<result>otherPage.jsp</result>
+		</action>
+	</package>
+</struts>
