@@ -4,25 +4,29 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
-	<display-name>test-client-javaee</display-name>
+	<display-name>test-client-wicket</display-name>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:beans.xml, classpath:beans-jpa-default.xml</param-value>
 	</context-param>
-
-	<servlet>
-		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>com.aqiang.test.javaee.servlet.HelloServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>HelloServlet</servlet-name>
-		<url-pattern>helloServlet</url-pattern>
-	</servlet-mapping>
+	
+	<filter>
+		<filter-name>WicketFilter</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.aqiang.test.wicket.MyApp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>configuration</param-name>
+			<param-value>deployment</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>WicketFilter</filter-name>
+		<url-pattern>/app/*</url-pattern>
+	</filter-mapping>
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
