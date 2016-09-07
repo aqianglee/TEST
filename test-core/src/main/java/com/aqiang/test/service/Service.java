@@ -1,8 +1,8 @@
-package com.aqiang.test.dao;
+package com.aqiang.test.service;
 
 import java.util.List;
 
-public interface Dao<T> {
+public interface Service<T> {
 	public void save(T t);
 
 	public T marge(T t);

@@ -4,9 +4,11 @@ import org.apache.wicket.Page;
 import org.apache.wicket.markup.html.IPackageResourceGuard;
 import org.apache.wicket.markup.html.SecurePackageResourceGuard;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
 import com.aqiang.test.wicket.page.GetStudentsDataPage;
 import com.aqiang.test.wicket.page.HomePage;
+import com.aqiang.test.wicket.page.SaveStudentPage;
 
 public class MyApp extends WebApplication {
 
@@ -18,7 +20,10 @@ public class MyApp extends WebApplication {
 	@Override
 	protected void init() {
 		super.init();
+<<<<<<< HEAD
 		getMarkupSettings().setDefaultMarkupEncoding("utf-8");
+=======
+>>>>>>> branch 'master' of https://github.com/aqianglee/test.git
 		enableUTF8Output();
 		enableServerFontLoadable();
 		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
