@@ -9,13 +9,21 @@
 	</welcome-file-list>
 	<display-name>test-client-javaee</display-name>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:beans.xml, classpath:beans-jpa-default.xml</param-value>
+	</context-param>
+
 	<servlet>
-		<servlet-name>HelloServlet</servlet-name>
+		<servlet-name>helloServlet</servlet-name>
 		<servlet-class>com.aqiang.test.javaee.servlet.HelloServlet</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
-		<servlet-name>HelloServlet</servlet-name>
-		<url-pattern>helloServlet</url-pattern>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/helloServlet</url-pattern>
 	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 </web-app>
