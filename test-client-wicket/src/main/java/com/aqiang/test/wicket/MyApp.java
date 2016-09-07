@@ -20,10 +20,6 @@ public class MyApp extends WebApplication {
 	@Override
 	protected void init() {
 		super.init();
-<<<<<<< HEAD
-		getMarkupSettings().setDefaultMarkupEncoding("utf-8");
-=======
->>>>>>> branch 'master' of https://github.com/aqianglee/test.git
 		enableUTF8Output();
 		enableServerFontLoadable();
 		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
