@@ -1,5 +1,9 @@
 package com.aqiang.test;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
+
 import com.aqiang.test.service.SpecialtyService;
 import com.aqiang.test.service.StudentService;
 import com.aqiang.test.service.UserService;
