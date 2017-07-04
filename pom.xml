@@ -6,8 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 	<modules>
 		<module>test-core</module>
@@ -19,5 +19,6 @@
 		<module>test-client-javaee</module>
 		<module>test-selenium</module>
 		<module>test-dwr</module>
+		<module>test-fileupload</module>
 	</modules>
 </project>

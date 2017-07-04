@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="alveole-defaults" extends="struts-default">
+		<action name="test" class="com.aqiang.test.fileupload.action.TestAction">
+			<result>/WEB-INF/jsp/test.jsp</result>
+		</action>
+		<action name="fileUpload" method="upload"
+			class="com.aqiang.test.fileupload.action.FileUploadAction">
+			<result>/WEB-INF/jsp/success.jsp</result>
+		</action>
+		<action name="status" class="com.aqiang.test.fileupload.action.StatusAction">
+		</action>
+	</package>
+	
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+		name="parser" class="com.aqiang.test.fileupload.request.MyMultiPartRequest"
+		scope="default" />
+
+	<constant name="struts.multipart.parser" value="parser" />
+	<constant name="struts.multipart.maxSize" value="500000000"></constant>
+</struts>
